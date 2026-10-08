@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <meta name="theme-color" content="#d71920"/>
+  <meta name="description" content="Betul Talks — local news, video news, events and local advertisements from Betul, Madhya Pradesh."/>
+  <title>Betul Talks — अपना शहर, अपनी बातें</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="manifest" href="./manifest.webmanifest"/>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-btn mobile-only" id="menuBtn" aria-label="Menu">☰</button>
+      <a class="brand" href="#home" aria-label="Betul Talks home">
+        <span class="brand-sun">✹</span>
+        <span><b>Betul</b><strong>Talks</strong></span>
+      </a>
+      <div class="top-actions">
+        <button class="location-pill">📍 Betul</button>
+        <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+        <button class="icon-btn has-dot" aria-label="Notifications">🔔</button>
+      </div>
+    </header>
+
+    <div class="breaking">
+      <span class="breaking-label">BREAKING</span>
+      <div class="ticker"><div id="tickerTrack"></div></div>
+    </div>
+
+    <nav class="category-bar" id="categoryBar"></nav>
+
+    <main id="app"></main>
+
+    <nav class="bottom-nav" aria-label="Primary">
+      <button data-view="home" class="nav-item active"><span>⌂</span><small>Home</small></button>
+      <button data-view="videos" class="nav-item"><span>▶</span><small>Videos</small></button>
+      <button data-view="ads" class="nav-item"><span>📣</span><small>Ads</small></button>
+      <button data-view="explore" class="nav-item"><span>⌕</span><small>Explore</small></button>
+      <button data-view="profile" class="nav-item"><span>◎</span><small>Profile</small></button>
+    </nav>
+  </div>
+
+  <dialog id="searchDialog" class="sheet-dialog">
+    <form method="dialog" class="dialog-head">
+      <b>Search Betul Talks</b><button class="icon-btn">✕</button>
+    </form>
+    <input id="globalSearch" class="search-input" placeholder="News, video, business खोजें…"/>
+    <div id="searchResults" class="search-results"></div>
+  </dialog>
+
+  <dialog id="storyDialog" class="story-dialog">
+    <form method="dialog" class="dialog-head sticky">
+      <span></span><button class="icon-btn">✕</button>
+    </form>
+    <article id="storyBody"></article>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
